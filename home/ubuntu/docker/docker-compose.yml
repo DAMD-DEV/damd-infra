@@ -1,0 +1,48 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    container_name: web-container
+    restart: always
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "80:80"
+    volumes:
+      - ./web/apache2.conf:/etc/apache2/apache2.conf
+      - ./web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ./web/php.ini:/usr/local/etc/php/php.ini
+      - ./src:/var/www/html
+      - ./web/access:/var/log/apache2/access
+      - ./web/error:/var/log/apache2/error
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: "phpmyadmin"
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=${DB_HOST}
+      - PMA_USER=${DB_ROOT_USER}
+      - PMA_PASSWORD=${DB_ROOT_PASSWORD}
+    volumes:
+      - ./phpmyadmin/php.ini:/usr/local/etc/php/conf.d/phpmyadmin-misc.ini
+      - ./phpmyadmin/.htaccess:/var/www/html/.htaccess
+      - ./phpmyadmin/.htpasswd:/var/www/html/.htpasswd
+  ftp:
+    image: stilliard/pure-ftpd:latest
+    container_name: "ftp"
+    restart: always
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    volumes:
+      - ./src:/home/ftpusers
+    environment:
+      - PUBLICHOST=${PUBLICHOST}
+      - FTP_USER_NAME=${FTP_USER_NAME}
+      - FTP_USER_PASS=${FTP_USER_PASS}
+      - FTP_USER_HOME=/home/ftpusers
+      - ADDED_FLAGS="--tls=2"
+

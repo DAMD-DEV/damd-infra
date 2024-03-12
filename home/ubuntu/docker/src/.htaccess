@@ -1,0 +1,75 @@
+AddHandler server-parsed .html
+
+DirectoryIndex index.html index.php
+
+# AOSSL wwwあり
+#RewriteEngine on
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://www.damd.co.jp/$1 [R=301,L]
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^(damd\.co\.jp)(:80)?
+#RewriteRule ^(.*) https://www.damd.co.jp/$1 [R=301,L]
+
+AuthUserFile    "/var/www/html/.htpasswd"
+AuthName        "Enter Your ID&Password"
+AuthType        Basic
+require         valid-user
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([0-9a-zA-Z\-_]+)/verify$ /users/mail-check.php?id=$1 [L,QSA]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^password_resets/([0-9a-zA-Z\-_]+)$ /mypage/edit/password.php?id=$1 [L,QSA]
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+
+#メンテナンスモード
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_URI} !^/mainte/
+#RewriteCond %{REMOTE_ADDR} !^(175\.135\.29\.83|203\.141\.132\.95)$
+#RewriteRule ^.*$ - [R=503,L]
+
+ErrorDocument 404 /404.html
+
+#ErrorDocument 500 /mainte/index.html
+#ErrorDocument 503 /mainte/index.html
+#ErrorDocument 403 /mainte/index.html
+#ErrorDocument 404 /mainte/index.html
+
+
+
+
+<Files ~ "^\.ht">
+deny from all
+</Files>
+
+# Redirect
+Redirect permanent /shop/ http://www.damd.co.jp/
+Redirect permanent /contact/ /inquiry/
+Redirect permanent /products/suzuki/ancel_lapin/ /products/suzuki/lapin_se/
+
+Redirect permanent /products/suzuki/jimny_dronco/ /products/suzuki/jimny_little-b/
+
+Redirect permanent /complete/tax/ /complete/shoplist/
+
+Redirect permanent /products/suzuki/hustler_carabiner/ /products/suzuki/hustler_carabina/

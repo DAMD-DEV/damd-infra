@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Inputour ID and Password."
+AuthUserFile /var/www/html/.htpasswd
+require valid-user
