@@ -33,6 +33,9 @@ RUN mv composer.phar /usr/local/bin/composer
 # Lalavel 10をインストール
 RUN composer global require laravel/installer
 
+# Sentry SDKをインストール
+RUN composer require sentry/sentry-laravel
+
 RUN cd /etc/apache2/mods-enabled/ \
  && ln -s ../mods-available/rewrite.load rewrite.load \
  && ln -s ../mods-available/include.load include.load
