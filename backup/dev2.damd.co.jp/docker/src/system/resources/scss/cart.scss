@@ -1,0 +1,35 @@
+h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#table-cart {
+    margin-bottom: 3rem;
+    width: 100%;
+
+    th {
+        padding: .3rem;
+        font-weight: bold;
+    }   
+
+    td {
+        padding: .5rem .3rem;
+    }
+
+    tfoot {
+        tr {
+            border-top: 1px solid #333;
+        }
+
+        td {
+            padding: 1rem .3rem;
+        }
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 80%;
+    }
+}

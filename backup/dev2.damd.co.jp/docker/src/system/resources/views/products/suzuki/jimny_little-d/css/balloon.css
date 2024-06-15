@@ -1,0 +1,264 @@
+
+
+.faq p{
+	text-align: center;
+}
+.faq .balloon p{
+	text-align: left;
+}
+
+.faq p.title_1{
+	font-family: 'Black Ops One', cursive;
+	font-size: 60px;
+	line-height: 1.2;
+	letter-spacing: .1em;
+	margin: .5em 0 !important;
+}
+.faq p.title_2{
+	font-family: 'Black Ops One', cursive;
+	font-size: 30px;
+	line-height: 1.2;
+}
+.faq p.title_1 .sub{
+	font-size: 30px;
+	display: block;
+	letter-spacing: 0em;
+}
+
+.faq p.image{
+	width: 65%;
+	margin: 0 auto;
+}
+
+
+/**
+BALLOON
+*/
+
+.balloon {
+ margin: 30px 0;
+ padding : 0 40px;
+ position: relative;
+}
+.balloon:after,.balloon:before {
+ clear: both;
+ content: "";
+ display: block;
+}
+figure img{
+	border-radius: 50%;
+}
+.balloon-image-left {
+ position: absolute;
+ left: 0;
+ margin: 0;
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+}
+.balloon-image-right {
+ position: absolute;
+ right: 0;
+ margin: 0;
+ width: 150px;
+ height: 150px;
+}
+.balloon figure img {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+}
+.balloon-image-description {
+ padding: 5px 0 0;
+ font-size: 10px;
+ text-align: center;
+}
+.balloon-text-right {
+ position: relative;
+ margin-left: 150px;
+ padding: 20px 40px 20px 40px;
+ /*border: 1px solid rgba(0,0,0,0.3);*/
+ border-radius: 15px;
+ float: left;
+ width: 60%;
+ background: rgba(0,0,0,0.1);
+}
+.balloon-text-right p::before {
+	content:"Q";
+	 font-family:'Black Ops One', cursive;
+	 display: inline-block;
+	 font-size: 40px;
+	/* float: left;*/
+	 line-height: 1;
+	 width: 8%;
+	 vertical-align: middle;
+}
+.balloon-text-left {
+ position: relative;
+ margin-right: 150px;
+ padding: 20px 40px 30px 40px;
+ /*border: 1px solid rgba(0,0,0,0.3);*/
+ border-radius: 15px;
+ float: right;
+ width: 60%;
+ background: rgba(0,0,0,0.5);
+}
+.balloon-text-left p::before {
+	content:"A"; 
+	font-family:'Black Ops One', cursive;
+	 display: inline-block;
+	 font-size: 40px;
+	 /*float: left;*/
+	 line-height: 1;
+	 width: 8%;
+	 vertical-align: middle;
+}
+.balloon-text-right p span,
+.balloon-text-left p span{
+	width: 92%;
+	/*float: left;*/
+	display: inline-block;
+	vertical-align: middle;
+}
+.balloon p {
+ margin: 0;
+ font-size: 120%;
+}
+.balloon-text-left p{
+	color: #FFF;
+}
+.balloon p.title{
+	font-size: 140%;
+	margin-bottom: .5em;
+	color: #333;
+	font-weight: 900;
+}
+
+.balloon p:last-child {
+ margin-bottom: 0;
+}
+/* 莨夊ｩｱ */
+.balloon-text-right:before {
+ position: absolute;
+ content: '';
+ border: 10px solid transparent;
+ /*border-right: 10px solid rgba(0,0,0,0.3);*/
+ top: 20px;
+ left: -20px;
+}
+.balloon-text-right:after {
+ position: absolute;
+ content: '';
+ border: 20px solid transparent;
+ border-right: 20px solid rgba(0,0,0,0.1);
+ top: 20px;
+ left: -40px;
+}
+.balloon-text-left:before {
+ position: absolute;
+ content: '';
+ border: 10px solid transparent;
+ /*border-left: 10px solid rgba(0,0,0,0.3);*/
+ top: 20px;
+ right: -20px;
+}
+.balloon-text-left:after {
+ position: absolute;
+ content: '';
+ border: 20px solid transparent;
+ border-left: 20px solid rgba(0,0,0,0.5);
+ top: 20px;
+ right: -40px;
+}
+
+@media screen and (max-width: 800px) {
+	
+
+/**
+BALLOON
+*/
+
+
+.faq p.title_1 {
+    font-size: 30px;
+}
+.faq p.title_1 .sub{
+	font-size: 20px;
+}
+
+.faq p.title_2 {
+    font-size: 20px;
+}
+
+.faq p.catch{
+	font-size: 110%;
+}
+
+.faq p.image{
+	width: 95%;
+}
+
+
+
+.balloon {
+ margin: 20px 0;
+ padding : 0 40px;
+}
+
+.balloon p{
+	font-size: 100%;
+}
+.balloon p br{
+	display: none;
+}
+
+.balloon p:first-letter{
+	font-size: 30px;
+}
+
+.balloon-image-left,
+.balloon-image-right{
+    width: 50px;
+    height: 50px;
+	top: 20px;
+}
+
+.balloon-text-right{
+    position: relative;
+    margin-left: 40px;
+    padding: 15px 15px 20px 15px;
+	/*width: 100%;*/
+}
+.balloon-text-left{
+    position: relative;
+    margin-right: 40px;
+    padding: 15px 15px 20px 15px;
+}
+
+.balloon p.title{
+	font-size: 120%;
+}
+
+.balloon-text-right:after{
+	top: 12px;
+}
+
+.balloon-text-right,
+.balloon-text-left {
+ width: 95%;
+}
+
+
+.balloon-text-left p::before {
+	 font-size: 30px;
+	 width: 10%;
+}
+.balloon-text-right p::before {
+	 font-size: 30px;
+	 width: 10%;
+}
+
+.balloon-text-right p span, .balloon-text-left p span{
+	width: 85%;
+
+}

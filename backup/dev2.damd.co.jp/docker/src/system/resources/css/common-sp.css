@@ -1,0 +1,140 @@
+@media (max-width: 575px) {
+html { font-size:13px; }
+body {
+	    min-width:inherit;
+	}
+
+
+
+.menu-mgn{
+	margin-top:45px;
+}
+
+.lower-ttl span{
+	display:block;
+	margin-top:.5rem;
+}
+
+.form .col-form-label {
+
+}
+.form-bg{
+
+		padding:4px;
+
+}
+.form-bg .badge{
+	margin-right:8px;
+}
+
+.form-group {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* ----------------------------------------
+
+コンテンツ幅
+
+---------------------------------------- */
+
+
+
+/* ----------------------------------------
+
+各ページ共通要素
+
+---------------------------------------- */
+
+/*各共通タイトル*/
+/*
+.common-ttl {
+    font-size: 20px;
+}
+
+*/
+
+/* ----------------------------------------
+
+パンくず
+
+---------------------------------------- */
+/*
+.breadcrumb {
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: normal;
+
+}
+.breadcrumb li {
+    display: inline;
+}
+*/
+/* ----------------------------------------
+
+上部に戻るボタン
+
+---------------------------------------- */
+/*
+.to-top-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 11px;
+    right: 0px;
+    bottom: 0px;
+    background: #46301b;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.5em;
+}
+*/
+.book-list-bottom{
+
+	padding: 0 20px;
+	}
+.book-list-bottom .item-wrap {
+    padding: 1rem;
+}
+
+.free-icon{
+	padding:10px 8px;
+	}
+.free-icon:before{
+	border-width: 60px 60px 0 0;
+	}
+
+/* ----------------------------------------
+
+ヘッダー
+
+---------------------------------------- */
+
+.main-header .info{
+	text-align:center;
+	}
+/* ----------------------------------------
+
+フッター
+
+---------------------------------------- */
+
+.main-footer .sns-icon {
+	position:relative;
+	right:0;
+	}
+
+	.form-group>.col-form-label {
+	    padding: 10px 0px;
+	}
+
+
+
+.form-group>div{
+	padding: 10px 0;
+}
+
+
+}

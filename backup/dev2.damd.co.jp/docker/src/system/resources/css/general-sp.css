@@ -1,0 +1,97 @@
+@media (max-width: 575px) {
+
+/* ----------------------------------------
+
+マージン・パディング設定
+
+---------------------------------------- */
+
+/*	
+.sp-mt-1{margin-top:8px;}
+.sp-mt-2{margin-top:16px;}
+.sp-mt-3{margin-top:24px;}
+.sp-mt-4{margin-top:32px;}
+.sp-mt-5{margin-top:40px;}
+.sp-mt-6{margin-top:80px;}
+.sp-mt-7{margin-top:160px;}
+
+.pc-mt-1{margin-top:0px;}
+.pc-mt-2{margin-top:0px;}
+.pc-mt-3{margin-top:0px;}
+.pc-mt-4{margin-top:0px;}
+.pc-mt-5{margin-top:0px;}
+.pc-mt-6{margin-top:0px;}
+.pc-mt-7{margin-top:0px;}
+
+.mt-1{margin-top:4px;}
+.mt-2{margin-top:8px;}
+.mt-3{margin-top:16px;}
+.mt-4{margin-top:24px;}
+.mt-5{margin-top:32px;}
+.mt-6{margin-top:40px;}
+.mt-7{margin-top:80px;}
+*/
+
+/* ブートストラップcolなどに使用 */
+.no-pad{padding:0;}
+
+/* ----------------------------------------
+
+インライン要素関連
+
+---------------------------------------- */
+
+/* 改行リセット */
+.sp-br-none br{
+	display: none;
+
+}
+
+/* ----------------------------------------
+
+表示関連
+
+---------------------------------------- */
+
+	.flex{
+		flex-direction: column;
+	}
+	
+.only-pc{
+	display:none;
+}
+
+.only-sp{
+	display:block;
+}
+
+/* ----------------------------------------
+
+動き
+
+---------------------------------------- */
+
+.scFade {
+    top: 0px;
+}
+
+/* ----------------------------------------
+
+レスポンシブテーブル
+
+---------------------------------------- */
+
+.r-table{
+	display: block;
+}
+
+.r-table .tr {
+	display: block;
+}
+
+.r-table .td {
+	display: block;
+}
+
+
+}

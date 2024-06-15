@@ -1,0 +1,48 @@
+h1.logo {
+    font-size: 1rem!important;
+}
+
+#register {
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #666;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        letter-spacing: .1em;
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        img {
+            max-width: 320px;
+        }
+    }
+
+    .form-group {
+        max-width: 500px;
+        margin: 0 auto 1rem;
+        border-bottom: 0!important;
+
+        input {
+            border: 2px solid #666;
+        }
+
+        select {
+            border: 2px solid #666;
+        }
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+    table {
+        font-size: .95rem;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}

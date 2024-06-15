@@ -1,0 +1,554 @@
+html { font-size:16px; }
+
+body{
+	font-family: "Lucida Sans",arial,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic", "Osaka",sans-serif;
+	line-height: 1.8em;
+	font-size:1rem;
+	min-width: 1200px;
+	}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-move-mb {
+    margin-bottom: 75px;
+}
+
+/* ----------------------------------------
+
+コンテンツ最大幅の設定
+
+---------------------------------------- */
+
+
+
+.content-wrap{
+	position: relative;
+	max-width:960px;
+	margin:0 auto;
+	padding:0 16px;
+	}
+
+.content-wrap-l{
+	position: relative;
+	max-width:1200px;
+	margin:0 auto;
+	padding:0 16px;
+	}
+
+.form .col-form-label{
+	background-color:#efefef;
+	}
+
+.form{
+	max-width:800px;
+	margin:0 auto;
+
+	}
+
+
+.hide{
+	display:none;
+	}
+
+.console{
+	color:#F30;
+
+	}
+
+/* ----------------------------------------
+
+各ページ共通要素
+
+---------------------------------------- */
+
+/*各共通タイトル*/
+/*
+
+.lower-ttl{
+
+}
+*/
+
+.lower-ttl {
+    padding: 2rem 2.5rem;
+    background-color: #efefef;
+}
+
+.common-ttl {
+	font-size:2rem;
+	background-color:#efefef;
+	padding:2rem;
+}
+.common-btn{
+	display:inline-block;
+	background-color: #efefef;
+	padding:1rem;
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s !important;
+	opacity:1;
+	}
+.common-btn:hover{
+	opacity:0.6;
+}
+/* ----------------------------------------
+
+共通カラー・フォント
+
+---------------------------------------- */
+
+/*
+
+
+.font-1{
+	font-family: 'Anton', sans-serif;
+}
+
+.mincho{
+	font-family: "游明朝","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝",serif;
+	}
+
+.mincho2{
+	font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	}
+
+*/
+
+/* ----------------------------------------
+
+パンくず
+
+---------------------------------------- */
+/*
+.bread-wrap{
+
+	position:relative;
+	}
+.breadcrumb {
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: -webkit-body;
+}
+
+.breadcrumb li{
+	display:inline-block;
+	}
+
+.breadcrumb li a{
+	color:#666;
+	}
+
+.breadcrumb li a:hover{
+	text-decoration:underline;
+	}
+
+.breadcrumb li a:after{
+	content:">";
+	padding:0 8px;
+	text-decoration:none !important;
+	display: inline-block;
+	}
+*/
+/* ----------------------------------------
+
+上部に戻るボタン
+
+---------------------------------------- */
+/*
+.to-top-btn {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    border: double #3ec8fb 1px;
+    background: #000000;
+    color: #3ec8fb;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.5em;
+}*/
+
+/* ----------------------------------------
+
+ヘッダー
+
+---------------------------------------- */
+
+.menu-mgn{
+	margin-top:59px;
+	}
+
+.main-header{
+	background:#efefef;
+	}
+.main-header .info{
+	padding: .5rem 1rem 1.5rem;
+	}
+.main-header .info .main-logo{
+	font-size:2.5rem;
+	line-height:1em;
+	}
+.main-header .info .txt{
+	font-size:1rem;
+	line-height:1em;
+	padding:0;
+	}
+
+.navbar{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:99;
+	width:100%;
+	background:#efefef;
+	}
+
+
+.thumbnail{
+	max-width:200px;
+	margin:0 auto;
+	}
+
+.thumbnail img{
+	width:100%;
+	}
+.of-hidden{
+	overflow:hidden;
+	}
+
+.rotate-img{
+	transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+	}
+
+
+.is-hide{
+ display:none;
+}
+.loading{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,.5);
+}
+.loading::before{
+  content:"";
+  display:block;
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:50px;
+  height:50px;
+  border-radius:5px;
+  margin-top:-15px;
+  margin-left:-15px;
+  background:white;
+}
+.loading::after{
+  content:"";
+  display:block;
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:32px;
+  height:32px;
+  border-radius:20px;
+  margin-top:-10px;
+  margin-left:-10px;
+  border:4px solid #60ABB9;
+  border-right:4px solid white;
+  animation: rotate 1s infinite linear;
+}
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+/* パターン1 */
+		.progressbar {
+		  margin: 0;
+		  padding: 0;
+		  counter-reset: step;
+                  z-index: 0;
+                  position: relative;
+									overflow:hidden;
+		}
+		.progressbar li {
+		  list-style-type: none;
+		  width: 33%;
+		  float: left;
+		  font-size: 12px;
+		  position: relative;
+		  text-align: center;
+		  text-transform: uppercase;
+		  color: #aaa;
+		}
+		.progressbar.prg-5 li {
+
+		  width: 20%;
+
+		}
+		.progressbar li:before {
+		  width: 30px;
+		  height: 30px;
+		  content: counter(step);
+		  counter-increment: step;
+		  line-height: 30px;
+		  display: block;
+		  text-align: center;
+		  margin: 0 auto 10px auto;
+		  border-radius: 50%;
+		  background-color: #eee;
+		}
+		.progressbar li:after {
+		  width: 100%;
+		  height: 2px;
+		  content: '';
+		  position: absolute;
+		  background-color: #eee;
+		  top: 15px;
+		  left: -50%;
+		  z-index: -1;
+		}
+		.progressbar li:first-child:after {
+		  content: none;
+		}
+		.progressbar li.active {
+		  color: green;
+		}
+		.progressbar li.active:before {
+		  background-color: #55b776;
+		  color:#fff;
+		}
+		.progressbar li.active + li:after {
+		  background-color: #55b776;
+		}
+
+.pb{
+	padding-bottom:80px;
+}
+
+button[type='submit']{
+	max-width: 200px;
+	width: 100%;
+    padding: 16px;
+    font-size: 18px;
+}
+
+.imgInput{
+	background:#efefef;
+	padding:24px;
+	border-radius:20px;
+	text-align:center;
+}
+.upfile{
+	background:#fff;
+	padding:10px;
+
+}
+.frm-ttl{
+	font-size:24px;
+}
+
+.progressbar.col3 li{
+	width:33%;
+}
+/* ----------------------------------------
+
+フッター
+
+---------------------------------------- */
+
+.pay-txt{
+
+}
+
+.pay-place{
+	margin:0 auto;
+	max-width:400px;
+	font-size:24px;
+	padding:20px;
+	background-color:#fffdea;
+	color:#5151b1;
+	border:2px solid #edebd5;
+	line-height:1.5em;
+}
+
+.console-txt{
+	font-size:18px;
+	padding:20px;
+}
+.console-txt span{
+	text-align:center;
+	font-size:30px;
+	display:block;
+}
+
+.re-btn-list a{
+	display:block;
+	width:100%;
+	padding:16px;
+	font-size:20px;
+
+}
+
+.content-img{
+	margin-top:16px;
+}
+.content-img img{
+	width:100%;
+	max-width: 100%;
+	height: auto;
+
+}
+
+.panel{
+	background-color:#efefef;
+	padding:8px;
+}
+
+.panel-heading{
+	font-weight:bold;
+}
+
+.description{
+	font-size:13px;
+}
+.description h2{
+	font-size:20px;
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+}
+
+.description textarea{
+	width:100%;
+	height:150px;
+}
+.description label{
+	padding:10px;
+	background-color:#ffaeae;
+	font-size:14px;
+}
+.badge-danger {
+    margin-right: 8px;
+	}
+
+.form-group {
+	margin-bottom:0;
+	border-bottom:1px solid #b3b3b3;
+	    font-size: 14px;
+}
+
+.form-group>.col-form-label{
+	padding: 20px 20px 20px 0;
+}
+
+.form-group>div{
+	padding:20px 0;
+}
+
+.form-sec{
+	padding:10px 15px;
+
+}
+.sec01{
+		background-color:#edf4f7;
+}
+
+.sec01 .col-form-label{
+		background-color:#bce2f3;
+}
+
+
+.sec02{
+		background-color:#e0f3e5;
+}
+
+.sec02 .col-form-label{
+		background-color:#afd8ba;
+}
+
+
+.sec03{
+		background-color:#f5ecec;
+}
+
+.sec03 .col-form-label{
+
+		background-color:#e0b7b7;
+}
+
+
+.form-sec h2{
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	    padding: 10px;
+}
+.stationsbox p{
+	font-weight:bold;
+}
+
+.cart_item_list{
+
+}
+
+.cart_item_list .item{
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.cart_item_list .item .ttl{
+	font-weight: bold;
+font-size: 15px;
+}
+.cart_item_list .item .sub-ttl {
+	font-size: 13px;
+	color: #837f7f;
+	margin-bottom: 0;
+	border-top: 1px solid #e1e1e1;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.sum{
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 20px 0;
+}
+
+
+.sum span{
+	display: inline-block;
+	margin-left: 10px;
+	color: red;
+	font-size: 20px;
+}
+
+.option-detail{
+	display: inline-block;
+	padding-right:10px;
+	font-size: 12px;
+	line-height: 1.3em;
+	padding-bottom: 10px;
+}
+
+/* 以下タブレット(col-md)の設定 */
+@media screen and (max-width: 992px) {
+
+
+}
